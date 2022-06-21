@@ -1,2 +1,7 @@
 # chrome-dashboard-looper
-Display and loop through a list of dashboard URLs on Chrome devices. 
+
+Display and loop through a list of dashboard URLs on Chrome devices.
+
+### Todo
+
+[ ] - Policy Schema
