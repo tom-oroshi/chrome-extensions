@@ -1,0 +1,12 @@
+{
+  "name": "chrome-dashboard-looper",
+  "short_name": "dashboard looper",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    "/images/icons/icon-512x512.png"
+  ],
+  "background_color": "#5eead4",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/index.html"
+}
