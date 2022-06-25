@@ -1,26 +1,9 @@
-const staticDashboard = "chrome-dashboard-looper-v1";
-const assets = [
-  "/",
-  "/index.html",
-  "/css/style.css",
-  "/js/app.js",
-  "/images/icons/icon-16x16.png",
-];
+// Get URL list
+const urlList = [];
 
-self.addEventListener("install", (installEvent) => {
-  installEvent.waitUntil(
-    caches.open(staticDashboard).then((cache) => {
-      cache.addAll(assets);
-    })
-  );
-});
-
-self.addEventListener("fetch", (fetchEvent) => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then((res) => {
-      return res || fetch(fetchEvent.request);
-    })
-  );
+chrome.runtime.onInStalled.addListener(() => {
+  chrome.storage.local.set({ urlLsit });
+  console.log(`URL List loaded: ${urlLsit}`);
 });
 
 checkdashboard();

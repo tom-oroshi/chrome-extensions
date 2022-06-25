@@ -1,9 +1,19 @@
 {
-  "name": "chrome-dashboard-looper",
-  "short_name": "dashboard looper",
-  "theme_color": "#0ea5e9",
+  "name": "Chrome URL Looper Extension",
+  "description": "Extension to loop through URLs at set intervals",
+  "manifest_version": 3,
   "permissions": [
     "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "/js/app.js"
+      ]
+    }
   ],
   "icons": [
     {
@@ -17,6 +27,6 @@
   "scope": "/",
   "start_url": "/index.html",
   "storage": {
-    "managed_schema": "/schema.json"
+    "managed_schema": "/managed-storage-schema.json"
   }
 }
