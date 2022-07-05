@@ -1,0 +1,19 @@
+{
+  "name": "Chrome URL Looper Extension",
+  "description": "Extension to loop through URLs at set intervals",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "512": "/images/icons/icon-512x512.png"
+  },
+  "storage": {
+    "managed_schema": "/managed-storage-schema.json"
+  }
+}
